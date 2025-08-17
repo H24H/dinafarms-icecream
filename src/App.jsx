@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { MapPin, Phone, Navigation, ChevronRight } from 'lucide-react'
 import './App.css'
+import dinaFarmsLogo from './assets/dina-farms-logo.png'
 
 // Sample data - in a real app, this would come from an API
 const cities = [
@@ -127,21 +128,13 @@ function App() {
       <div className="container">
         <div className="header">
           <div className="logo-container">
-            {/* Logo placeholder - replace src with actual logo URL */}
             <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrl2LLe9kXE3bz851x4eolzq0WIljKJ2skDQ&s" 
+              src={dinaFarmsLogo}
               alt="Dina Farms Logo" 
               className="logo-image"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'block';
-              }}
             />
-            <div className="logo-fallback" style={{ display: 'none' }}>
-              <div className="logo-placeholder">DF</div>
-            </div>
-            <h1>Dina Farms Ice Cream Finder</h1>
           </div>
+          <h1>Dina Farms Ice Cream Finder</h1>
           <p className="subtitle">Find your nearest Dina Farms branch in just 3 simple steps</p>
         </div>
 

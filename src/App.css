@@ -39,36 +39,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .logo-image {
-  width: 80px;
-  height: 60px;
+  width: 200px;
+  height: 120px;
   object-fit: contain;
-  border-radius: 8px;
-}
-
-.logo-fallback {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-placeholder {
-  width: 80px;
-  height: 60px;
-  background: linear-gradient(135deg, #1e3a8a, #1e40af);
-  color: white;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
+
+
 
 .header h1 {
   font-size: 2rem;
@@ -414,6 +395,11 @@
   .container {
     padding: 25px;
     max-height: 95vh;
+  }
+  
+  .logo-image {
+    width: 150px;
+    height: 90px;
   }
   
   .header h1 {
