@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Cairo', 'Amiri', 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
 }
 
 /* Body styles moved to index.css */
@@ -14,6 +15,8 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  direction: rtl;
+  text-align: right;
 }
 
 .container {
@@ -33,6 +36,7 @@
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 2px solid #e9ecef;
+  direction: rtl;
 }
 
 .logo-container {
@@ -213,7 +217,7 @@
 
 .arrow-icon {
   position: absolute;
-  right: 15px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: #9ca3af;
@@ -224,7 +228,7 @@
 
 .option-card:hover .arrow-icon {
   color: #1e3a8a;
-  transform: translateY(-50%) translateX(3px);
+  transform: translateY(-50%) translateX(-3px);
 }
 
 /* Branch details */
@@ -285,8 +289,62 @@
   padding: 12px;
   background: white;
   border-radius: 10px;
-  border-left: 4px solid #1e3a8a;
+  border-right: 4px solid #1e3a8a;
   transition: all 0.3s ease;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.maps-button {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+}
+
+.maps-button:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+}
+
+.call-button {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+}
+
+.call-button:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+}
+
+.action-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  color: #1e3a8a;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .info-item.clickable {
@@ -299,16 +357,12 @@
   transform: translateX(2px);
 }
 
-.info-icon {
-  width: 20px;
-  height: 20px;
-  color: #1e3a8a;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
 .info-item.clickable:hover .info-icon {
   color: #f97316;
+}
+
+.info-item.clickable:hover .phone-number {
+  color: #f97316 !important;
 }
 
 .info-item strong {
@@ -329,10 +383,6 @@
 .phone-number {
   color: #1e3a8a !important;
   font-weight: 500;
-}
-
-.info-item.clickable:hover .phone-number {
-  color: #f97316 !important;
 }
 
 .branch-actions {
